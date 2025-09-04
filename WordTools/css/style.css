@@ -1,0 +1,329 @@
+/* 全局样式重置与基础设置 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* 头部样式 */
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 60px;
+  height: 60px;
+  margin-right: 10px;
+}
+
+.logo h1 {
+  font-size: 28px;
+  color: #4a6fa5;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+}
+
+.nav li {
+  margin-left: 20px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.nav a:hover {
+  color: #4a6fa5;
+}
+
+/* banner 样式 */
+.banner {
+  background: linear-gradient(135deg, #4a6fa5 0%, #6b8eac 100%);
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+
+.banner-content h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.banner-content p {
+  font-size: 18px;
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+}
+
+/* 通用 section 样式 */
+.section {
+  padding: 60px 0;
+}
+
+.section h3 {
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #4a6fa5;
+}
+
+/* 关于我们区域 */
+.intro-section p {
+  margin-bottom: 15px;
+  line-height: 1.8;
+  text-align: center;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* 工具列表区域 */
+.tools-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+}
+
+.tool-item {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tool-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.tool-item h4 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #4a6fa5;
+  text-align: center;
+  border-bottom: 2px solid #e6f0fa;
+  padding-bottom: 15px;
+}
+
+.tool-description {
+  margin-bottom: 25px;
+}
+
+.tool-description p {
+  margin-bottom: 15px;
+  line-height: 1.7;
+}
+
+.tool-description h5 {
+  font-size: 18px;
+  margin: 20px 0 10px 0;
+  color: #333;
+}
+
+.tool-description ul {
+  padding-left: 20px;
+  margin-bottom: 15px;
+}
+
+.tool-description li {
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
+/* 工具截图区域 */
+.tool-screenshot {
+  margin-bottom: 25px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 250px;
+}
+
+.tool-screenshot img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  max-height: 400px; /* 限制最大高度，确保两个图片显示比例协调 */
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.tool-screenshot img:hover {
+  transform: scale(1.02);
+}
+
+/* 确保小屏幕上图片也能良好显示 */
+@media (max-width: 768px) {
+  .tool-screenshot {
+    min-height: 200px;
+  }
+  
+  .tool-screenshot img {
+    max-height: 300px;
+  }
+}
+
+.placeholder-text {
+  margin-top: 15px;
+  color: #718096;
+  font-style: italic;
+}
+
+/* 下载按钮区域 */
+.tool-download {
+  text-align: center;
+}
+
+.download-btn {
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: #4a6fa5;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  margin-bottom: 10px;
+}
+
+.download-btn:hover {
+  background-color: #3a5a8a;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(74, 111, 165, 0.3);
+}
+
+.download-tip {
+  color: #718096;
+  font-size: 14px;
+}
+
+/* 常见问题区域 */
+.faq-list {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  background-color: #fff;
+  padding: 20px 30px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.faq-item h5 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #4a6fa5;
+}
+
+.faq-item p {
+  color: #555;
+  line-height: 1.6;
+}
+
+/* 联系我们区域 */
+.contact-section {
+  background-color: #f0f4f8;
+  text-align: center;
+}
+
+.contact-section p {
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+/* 底部样式 */
+.footer {
+  background-color: #fff;
+  text-align: center;
+  padding: 30px 0;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  margin-top: 40px;
+}
+
+.footer p {
+  color: #999;
+  font-size: 14px;
+}
+
+/* 响应式适配 */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .logo {
+    margin-bottom: 10px;
+  }
+
+  .nav ul {
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .nav li {
+    margin: 0 10px;
+  }
+
+  .banner {
+    height: 300px;
+  }
+
+  .banner-content h2 {
+    font-size: 28px;
+  }
+
+  .section {
+    padding: 40px 0;
+  }
+
+  .tool-item {
+    padding: 20px;
+  }
+
+  .tool-item h4 {
+    font-size: 20px;
+  }
+
+  .screenshot-placeholder {
+    height: 200px;
+  }
+}
